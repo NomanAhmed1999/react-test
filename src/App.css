@@ -1,38 +1,159 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.poetsen-one-regular {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+
+
+
+.tab-ani-down{
+	        animation: slide-down 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.tab-ani-up{
+	        animation: slide-up 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.tab-1:hover .arrow-down{
+  animation: slide-down 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.tab-2:hover .arrow-up{
+  animation: slide-up 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.graph-arrow:hover ~ .hide-line{
+  display: block !important;
+}
+
+.graph-card:hover .card-amount{
+  animation: graph-amount-up 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) alternate both;
+}
+
+.graph-card:hover .detail-btn{
+  display: flex !important;
+  animation: graph-detail-up 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) alternate both;
+}
+
+.graph-leave .card-amount{
+  animation: graph-amount-down 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) alternate both;
+}
+
+.graph-leave .detail-btn{
+  display: flex !important;
+  animation: graph-detail-down 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) alternate both;
+}
+
+
+
+@keyframes slide-down {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(35px);
+            transform: translateY(35px);
+            opacity: 0;
+  }
+  70% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 0;
+  }
+  80% {
+    -webkit-transform: translateY(-35px);
+            transform: translateY(-35px);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes slide-up {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
-  to {
-    transform: rotate(360deg);
+  40% {
+    -webkit-transform: translateY(-35px);
+            transform: translateY(-35px);
+            opacity: 0;
+  }
+  70% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 0;
+  }
+  80% {
+    -webkit-transform: translateY(35px);
+            transform: translateY(35px);
+  }
+}
+
+@keyframes graph-amount-up {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-35px);
+            transform: translateY(-35px);
+            opacity: 0;
+  }
+}
+
+@keyframes graph-detail-up {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-60px);
+            transform: translateY(-60px);
+  }
+}
+
+@keyframes graph-amount-down {
+  0% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+            opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1;
+  }
+}
+
+@keyframes graph-detail-down {
+  0% {
+    -webkit-transform: translateY(-60px);
+            transform: translateY(-60px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
