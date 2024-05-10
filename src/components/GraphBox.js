@@ -67,7 +67,7 @@ const GraphBox = ({ name, perc, amount, iconInit, iconProcess, iconFinished }) =
                             setExpandCard(false); setTimeout(() => {
                                 setExpandGraph(false)
                             }, 100);
-                        }} className="w-8 h-full bg-slate-200 absolute -right-4 flex justify-center items-center hover:bg-slate-300">
+                        }} className="w-8 h-full bg-slate-200 absolute -right-0 flex justify-center items-center hover:bg-slate-300">
                             <IoIosArrowBack />
                         </button>
 
