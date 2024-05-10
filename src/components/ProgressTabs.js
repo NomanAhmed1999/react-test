@@ -29,9 +29,9 @@ const ProgressTabs = () => {
     return (
         <div className='p-6'>
             <div className='flex'>
-                <button className={activeTab === 1 ? 'tab-1 w-1/2 p-2 flex items-center border-b-2 border-black cursor-pointer transition-all duration-200' : 'tab-1 w-1/2 p-2 flex items-center border-b-2 border-gray-200 cursor-pointer transition-all duration-200'} onClick={() => { setActiveTab(1); activeAnimation() }}>
-                    <div className={activeTab === 1 ? 'w-12 h-12 rounded-full flex flex-col justify-center items-center bg-black' : 'w-12 h-12 rounded-full flex flex-col justify-center items-center bg-gray-200 overflow-hidden'}>
-                        <BsArrowDownShort className={arrowAnimate ? 'arrow-down tab-ani-down' : 'arrow-down'} color='white' size={30} />
+                <button className={activeTab === 1 ? 'tab-1 w-1/2 p-2 flex items-center border-b-2 border-black cursor-pointer transition-all duration-200 sxxl:border-b-4' : 'tab-1 w-1/2 p-2 flex items-center border-b-2 border-gray-200 cursor-pointer transition-all duration-200 sxxl:border-b-4'} onClick={() => { setActiveTab(1); activeAnimation() }}>
+                    <div className={activeTab === 1 ? 'w-12 h-12 rounded-full flex flex-col justify-center items-center bg-black sxxl:h-16 sxxl:w-16' : 'w-12 h-12 rounded-full flex flex-col justify-center items-center bg-gray-200 overflow-hidden sxxl:h-16 sxxl:w-16'}>
+                        <BsArrowDownShort className={arrowAnimate ? 'arrow-down tab-ani-down text-[30px] sxxl:text-5xl' : 'arrow-down text-[30px] sxxl:text-5xl'} color='white' />
                         <div className='w-[25px] h-[1px] rounded-full border-b-4 border-white'></div>
                     </div>
                     <div className='ms-4'>
@@ -39,9 +39,9 @@ const ProgressTabs = () => {
                         <p className={activeTab === 1 ? 'poppins-medium text-3xl text-black' : 'poppins-medium text-3xl text-gray-500'}>$5,083</p>
                     </div>
                 </button>
-                <div className={activeTab === 2 ? 'tab-2 w-1/2 p-2 flex items-center border-b-2 border-black cursor-pointer transition-all duration-200' : 'tab-2 w-1/2 p-2 flex items-center border-b-2 border-gray-200 cursor-pointer transition-all duration-200'} onClick={() => { setActiveTab(2); activeAnimation() }}>
-                    <div className={activeTab === 2 ? 'w-12 h-12 rounded-full flex flex-col justify-center items-center bg-black' : 'w-12 h-12 rounded-full flex flex-col justify-center items-center bg-gray-200'}>
-                        <BsArrowUpShort className={arrowAnimate ? 'arrow-up tab-ani-up' : 'arrow-up'} color='white' size={30} />
+                <div className={activeTab === 2 ? 'tab-2 w-1/2 p-2 flex items-center border-b-2 border-black cursor-pointer transition-all duration-200 sxxl:border-b-4' : 'tab-2 w-1/2 p-2 flex items-center border-b-2 border-gray-200 cursor-pointer transition-all duration-200 sxxl:border-b-4'} onClick={() => { setActiveTab(2); activeAnimation() }}>
+                    <div className={activeTab === 2 ? 'w-12 h-12 rounded-full flex flex-col justify-center items-center bg-black sxxl:h-16 sxxl:w-16' : 'w-12 h-12 rounded-full flex flex-col justify-center items-center bg-gray-200 sxxl:h-16 sxxl:w-16'}>
+                        <BsArrowUpShort className={arrowAnimate ? 'arrow-up tab-ani-up text-[30px] sxxl:text-5xl' : 'arrow-up text-[30px] sxxl:text-5xl'} color='white' />
                         <div className='w-[25px] h-[1px] rounded-full border-b-4 border-white'></div>
                     </div>
                     <div className='ms-4'>

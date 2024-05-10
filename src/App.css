@@ -59,7 +59,7 @@
 }
 
 .graph-card:hover .b-line{
-  width: 100% !important;
+  width: 92% !important;
 }
 
 .b-line-active{
@@ -74,6 +74,18 @@
 .graph-leave .detail-btn{
   display: flex !important;
   animation: graph-detail-down 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) alternate both;
+}
+
+.expand-graph-card{
+  width: 1000px;
+  height: 270px;
+}
+.collaps-graph-card{
+  width: 400px;
+  height: 270px
+}
+.graph-card-inner-w{
+  width: 530px;
 }
 
 
@@ -165,4 +177,32 @@
     -webkit-transform: translateY(50px);
             transform: translateY(50px);
   }
+}
+
+
+@media screen and (min-width: 2000px) and (max-width: 2300px) {
+  .expand-graph-card{
+    width: 1000px;
+    height: 270px;
+  }
+  .collaps-graph-card{
+    width: 580px;
+    height: 270px;
+  }
+  
+}
+
+@media screen and (min-width: 2300px) {
+  .expand-graph-card{
+    width: 1500px;
+    height: 350px;
+  }
+  .collaps-graph-card{
+    width: 650px;
+    height: 350px;
+  }
+  .graph-card-inner-w{
+    width: 600px;
+  }
+  
 }
